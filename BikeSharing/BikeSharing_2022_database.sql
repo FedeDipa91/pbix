@@ -463,8 +463,7 @@ DROP COLUMN end_lng;
 ALTER TABLE combined_data
 RENAME COLUMN member_casual TO user_type;
 
--- Create columns for split date and time ( colum started_time, ended_time) - Rename started_at and started_end as started/ended_date
--- ESTO NO ERA NECESARIO, BORRAR Y SOLO DEJAR MONTH AND WEEKDAY 
+-- Adding columns to split the starting and ending date and time. 
 ALTER TABLE combined_data 
 ADD COLUMN start_date DATE,
 ADD COLUMN start_time TIME,
@@ -600,10 +599,6 @@ ORDER BY CASE start_weekday
          WHEN 'Saturday' THEN 6
          WHEN 'Sunday' THEN 7
          END;
-
--- This i will do it on Tableau
--- Calculate total, mean max and min of trip count for total and for weekdays and month, for each user type
--- Make a list of the most common start and end station. Try to relate with turistics areas
 
 -- Getting an strange result when grouping count of member_type there were records with a long string of unkown text
 -- Updating to modify the text to 'member' and 'casual' 
