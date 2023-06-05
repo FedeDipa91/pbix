@@ -9,7 +9,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
 
 -- use database
-USE BikeSharing
+USE BikeSharing;
 
 SET GLOBAL local_infile = 1;
 
