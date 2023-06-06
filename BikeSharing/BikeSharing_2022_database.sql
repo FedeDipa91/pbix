@@ -1,5 +1,5 @@
 -- create database
-CREATE DATABASE IF NOT EXISTS BikeSharing
+CREATE DATABASE IF NOT EXISTS BikeSharing;
 -- dumb database as a .csv
 
 SELECT * FROM combined_data
